@@ -64,14 +64,14 @@ function VoiceRecorder() {
             setIsLoading(true);
             setIsListening(false);
 
-            const token = localStorage.getItem('token'); // Ensure token is set
+            const token = localStorage.getItem('token');
 
             try {
                 const response = await fetch('http://localhost:5000/api/conversations/save', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`, // Token included in request headers
+                        'Authorization': `Bearer ${token}`,
                     },
                     body: JSON.stringify({ userMessage: transcription }),
                 });

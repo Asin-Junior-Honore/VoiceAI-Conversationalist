@@ -27,7 +27,6 @@ const Conversations: React.FC = () => {
                 }
 
                 const data = await response.json();
-                // console.log(data)
                 setConversations(data);
             } catch (error) {
                 console.error("Error fetching conversations:", error);

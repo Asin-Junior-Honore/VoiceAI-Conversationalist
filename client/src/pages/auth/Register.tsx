@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom';
 
 const Register: React.FC = () => {
     const [username, setUsername] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [message, setMessage] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate()
 
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -24,7 +24,7 @@ const Register: React.FC = () => {
             if (response.ok) {
                 setMessage('Registration successful!');
                 setTimeout(() => {
-                    navigate('/login'); // Use navigate instead of history.push
+                    navigate('/login');
                 }, 2000);
             } else {
                 setMessage(data.error);

@@ -223,7 +223,7 @@ section button:disabled {
 section .message {
   margin-top: 10px;
   text-align: center;
-  color: #ff0000; /* Red for error messages */
+  color: #ff0000; 
 }
 
 .conversations-section {
@@ -244,7 +244,7 @@ section .message {
   font-size: 0.8em;
   color: #888;
   margin-top: 5px;
-  text-align: right; /* Align timestamp to the right */
+  text-align: right;
 }
 
 .user {
