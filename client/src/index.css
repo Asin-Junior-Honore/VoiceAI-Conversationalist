@@ -1,0 +1,260 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #242424;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+button:hover {
+  background-color: #646cff;
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+    color: #000;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+aside {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.transcription {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.chat-container {
+  max-height: 330px;
+  overflow-y: auto;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #e1f5fe;
+  border-radius: 10px;
+  border: none;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.user {
+  background-color: #e1f5fe;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.ai {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.loading {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
+
+.voice-settings {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.voice-settings label {
+  color: #fff;
+}
+
+.voice-settings input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+.voice-settings input[type="range"]:hover {
+  background-color: #646cff;
+  border-radius: 5px;
+}
+.empty-message {
+  font-style: italic;
+  font-size: 1.1em;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px dashed #ccc;
+}
+
+section {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+section h2 {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+section input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+section button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section button:disabled {
+  background-color: #ccc;
+}
+
+section .message {
+  margin-top: 10px;
+  text-align: center;
+  color: #ff0000; /* Red for error messages */
+}
+
+.conversations-section {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-container {
+  margin-bottom: 15px;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 5px;
+  text-align: right; /* Align timestamp to the right */
+}
+
+.user {
+  background-color: #e1f5fe;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.ai {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+  margin-right: auto;
+}
