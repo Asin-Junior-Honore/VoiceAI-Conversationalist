@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const conversationController = require("../controllers/conversationController");
-const authMiddleware = require("../middleware/authMiddleware"); // Import your custom middleware
+const authMiddleware = require("../middleware/authMiddleware");
 
 // Route to save a conversation
 router.post("/save", authMiddleware, conversationController.saveConversation);
