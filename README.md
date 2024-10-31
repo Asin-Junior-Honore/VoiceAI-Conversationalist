@@ -10,7 +10,6 @@
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tip](#Tip)
 
 ## Features
 - **Real-Time Conversation**: Users can engage in voice-based conversations with the AI.
