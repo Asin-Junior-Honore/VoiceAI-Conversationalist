@@ -10,6 +10,7 @@
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Tip](#Tip)
 
 ## Features
 - **Real-Time Conversation**: Users can engage in voice-based conversations with the AI.
@@ -108,3 +109,10 @@ Ensure the following environment variables are set up in your `.env` file:
 ### Coding Guidelines
 - **Backend**: Separate logic by grouping into controllers, models, and utilities for maintainability.
 - **Frontend**: Ensure components are modular and reusable.
+
+Certainly! Here’s a tip section that you can add to the README for guiding users on crafting questions for better AI responses:
+
+
+
+### Tip: Enhancing AI Responses
+For more relevant and engaging responses from the AI, check the keywords and phrases that trigger specific answers. You can find these in the `aiResponseGenerator.js` file located in the `server` folder. Incorporating these keywords (e.g., "career," "tech field," "job search tips") in your message can help guide the AI to respond with information that best matches your query.
