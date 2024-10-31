@@ -39,7 +39,7 @@ const Conversations: React.FC = () => {
     }, []);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <h3>Loading...</h3>;
     }
 
     return (
@@ -48,18 +48,21 @@ const Conversations: React.FC = () => {
             {conversations.length === 0 ? (
                 <p className="empty-message">No conversations found.</p>
             ) : (
-                <div className="chat-container">
-                    {conversations.map((conversation, index) => (
-                        <div key={index} className="message-container">
-                            <div className="message user">
-                                <strong>You:</strong> {conversation.userMessage}
+                <div>
+                    <div className="chat-container">
+                        {conversations.map((conversation, index) => (
+                            <div key={index} className="message-container">
+                                <div className="message user">
+                                    <strong>You:</strong> {conversation.userMessage}
+                                </div>
+                                <div className="message ai">
+                                    <strong>AI:</strong> {conversation.aiResponse}
+                                </div>
+                                <small className="timestamp">{new Date(conversation.timestamp).toLocaleString()}</small>
                             </div>
-                            <div className="message ai">
-                                <strong>AI:</strong> {conversation.aiResponse}
-                            </div>
-                            <small className="timestamp">{new Date(conversation.timestamp).toLocaleString()}</small>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+                    
                 </div>
             )}
         </div>

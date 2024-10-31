@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaUserCircle, FaRobot } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 declare global {
     interface Window {
@@ -126,7 +127,7 @@ function VoiceRecorder() {
                     <p>{transcription || "Your speech will appear here..."}</p>
                 </div>
 
-                <button onClick={handleSend} style={{ marginTop: '10px' }}>Send</button>
+                <button onClick={handleSend}>Send</button>
 
                 {/* Voice settings controls */}
                 <div className="voice-settings" style={{ marginTop: '20px' }}>
@@ -155,27 +156,35 @@ function VoiceRecorder() {
                 </div>
 
             </aside>
-            <aside className="chat-container">
-                {chatHistory.length === 0 ? (
-                    <h2 className="empty-message">Chat will display here...</h2>
-                ) : (
-                    chatHistory.map((message, index) => (
-                        <div key={index} className={`message ${message.startsWith('You') ? 'user' : 'ai'}`}>
-                            {message.startsWith('You') ? (
-                                <div>
-                                    <FaUserCircle style={{ marginRight: '8px' }} />
-                                    {message}
-                                </div>
-                            ) : (
-                                <div>
-                                    <FaRobot style={{ marginRight: '8px' }} />
-                                    {message}
-                                </div>
-                            )}
-                        </div>
-                    ))
-                )}
-                {isLoading && <p className="loading">Loading...</p>}
+            <aside>
+                <div className="chat-container">
+                    {chatHistory.length === 0 ? (
+                        <h2 className="empty-message">Chat will display here...</h2>
+                    ) : (
+                        chatHistory.map((message, index) => (
+                            <div key={index} className={`message ${message.startsWith('You') ? 'user' : 'ai'}`}>
+                                {message.startsWith('You') ? (
+                                    <div>
+                                        <FaUserCircle style={{ marginRight: '8px' }} />
+                                        {message}
+                                    </div>
+                                ) : (
+                                    <div>
+                                        <FaRobot style={{ marginRight: '8px' }} />
+                                        {message}
+                                    </div>
+                                )}
+                            </div>
+                        ))
+                    )}
+                    {isLoading && <p className="loading">Loading...</p>}
+                </div>
+
+                <Link to={'conversations'}>
+                    <div className='view-chats'>
+                        <button>View your conversations</button>
+                    </div>
+                </Link>
             </aside>
 
         </div>
