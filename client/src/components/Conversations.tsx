@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Conversation {
     userMessage: string;
@@ -67,6 +68,12 @@ const Conversations: React.FC = () => {
                     </div>
                 )}
             </div>
+
+            <Link to={'/'}>
+                <div className="conversations-section">
+                    <button>Back To Home</button>
+                </div>
+            </Link>
         </div>
     );
 };

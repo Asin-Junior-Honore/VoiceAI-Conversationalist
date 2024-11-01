@@ -181,7 +181,7 @@ function VoiceRecorder() {
                 </div>
 
                 <Link to={'conversations'}>
-                    <div className='view-chats'>
+                    <div className='chat-container' style={{ marginTop: '28px' }}>
                         <button>View your conversations</button>
                     </div>
                 </Link>
