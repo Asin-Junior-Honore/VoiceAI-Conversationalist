@@ -43,28 +43,30 @@ const Conversations: React.FC = () => {
     }
 
     return (
-        <div className="conversations-section">
-            <h1>Your Conversations</h1>
-            {conversations.length === 0 ? (
-                <p className="empty-message">No conversations found.</p>
-            ) : (
-                <div>
-                    <div className="chat-container">
-                        {conversations.map((conversation, index) => (
-                            <div key={index} className="message-container">
-                                <div className="message user">
-                                    <strong>You:</strong> {conversation.userMessage}
+        <div className='wrapper'>
+            <div className="conversations-section">
+                <h1>Your Conversations</h1>
+                {conversations.length === 0 ? (
+                    <p className="empty-message">No conversations found.</p>
+                ) : (
+                    <div>
+                        <div className="chat-container">
+                            {conversations.map((conversation, index) => (
+                                <div key={index} className="message-container">
+                                    <div className="message user">
+                                        <strong>You:</strong> {conversation.userMessage}
+                                    </div>
+                                    <div className="message ai">
+                                        <strong>AI:</strong> {conversation.aiResponse}
+                                    </div>
+                                    <small className="timestamp">{new Date(conversation.timestamp).toLocaleString()}</small>
                                 </div>
-                                <div className="message ai">
-                                    <strong>AI:</strong> {conversation.aiResponse}
-                                </div>
-                                <small className="timestamp">{new Date(conversation.timestamp).toLocaleString()}</small>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+
                     </div>
-                    
-                </div>
-            )}
+                )}
+            </div>
         </div>
     );
 };

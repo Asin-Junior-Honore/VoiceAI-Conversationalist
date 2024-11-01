@@ -266,3 +266,26 @@ section .message {
 strong {
   margin-right: 20px;
 }
+
+@media (max-width: 850px) {
+  aside {
+    width: -webkit-fill-available;
+  }
+  .container {
+    flex-direction: column;
+    width: auto;
+  }
+  .transcription {
+    width: auto;
+  }
+  .message {
+    width: auto;
+  }
+  .wrapper {
+    padding-inline: 20px;
+  }
+
+  .conversations-section {
+    padding: 10px;
+  }
+}
