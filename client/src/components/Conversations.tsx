@@ -16,7 +16,7 @@ const Conversations: React.FC = () => {
             const token = localStorage.getItem('token');
 
             try {
-                const response = await fetch('http://localhost:5000/api/conversations', {
+                const response = await fetch('https://voice-ai-conversationalist.vercel.app/api/conversatons', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
