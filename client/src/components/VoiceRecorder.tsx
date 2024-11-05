@@ -68,7 +68,7 @@ function VoiceRecorder() {
             const token = localStorage.getItem('token');
 
             try {
-                const response = await fetch('https://voice-ai-conversationalist.vercel.app/api/conversations/save', {
+                const response = await fetch('https://voiceai-conversationalist.onrender.com/api/conversations/save', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
